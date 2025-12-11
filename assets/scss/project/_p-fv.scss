@@ -1,0 +1,7 @@
+@use "../global" as global;
+
+.p-fv{
+  @include global.mq(sp){
+    margin-top: 16vw;
+  }
+}

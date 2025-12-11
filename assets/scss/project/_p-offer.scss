@@ -1,0 +1,16 @@
+@use "../global" as global;
+
+.p-offer{
+  &__wrapper{
+    position: relative;
+  }
+  &__btn{
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include global.mq(sp){
+      bottom: 6.133vw;
+    }
+  }
+}

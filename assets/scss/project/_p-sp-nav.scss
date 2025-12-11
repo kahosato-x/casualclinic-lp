@@ -1,0 +1,43 @@
+@use "../global" as global;
+
+.p-sp-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 90;
+  transition: opacity 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__wrapper {
+    padding: 0 4vw 8.533vw;
+    background: #fff;
+  }
+  li {
+    font-size: 4.267vw;
+    font-weight: bold;
+    border-bottom: 0.267vw solid #e1e1e1;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 2.667vw;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.867vw;
+      height: 2.933vw;
+      background: url(../img/icon_arrow.svg) no-repeat center / contain;
+    }
+  }
+  a{
+    width: 100%;
+    padding: 4.533vw 2.667vw 4.8vw;
+  }
+}

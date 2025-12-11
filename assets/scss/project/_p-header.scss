@@ -1,0 +1,29 @@
+@use "../global" as global;
+
+.p-header{
+  z-index: map-get(global.$layer, "header");
+  background-color: #fff;
+  padding: 14px 0 13px;
+  @include global.mq(sp){
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 3.2vw 0 3.2vw;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include global.mq(sp){
+      justify-content: space-between;
+      padding: 0 4vw;
+    }
+  }
+  &__logo{
+    width: 190px;
+    @include global.mq(sp){
+      width: 50.667vw;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use "../global" as global;
+
+.p-hamburger {
+  display: none;
+  @include global.mq(sp){
+    width: 9.6vw;
+    height: 9.6vw;
+    border-radius: 8vw;
+    padding: 2.133vw;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    background-color: global.$primary-color;
+    span {
+      position: absolute;
+      width: 5.333vw;
+      height: 0.533vw;
+      background: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s;
+      border-radius: 0.267vw;
+    }
+    span:nth-child(1) {
+      top: 2.933vw;
+    }
+    span:nth-child(2) {
+      top: 4.533vw;
+    }
+    span:nth-child(3) {
+      top: 6.133vw;
+    }
+    &.active {
+      span:nth-child(1) {
+        transform:translateX(-50%) rotate(45deg);
+        top: 4.533vw;
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform:translateX(-50%) rotate(-45deg);
+        top: 4.533vw;
+      }
+    }
+  }
+}

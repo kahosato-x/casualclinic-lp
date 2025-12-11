@@ -1,0 +1,10 @@
+@use "../global" as global;
+.p-container{
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+  @include global.mq(sp){
+    width: 100%;
+    max-width: 100%;
+  }
+}

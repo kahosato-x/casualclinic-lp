@@ -1,0 +1,22 @@
+{
+  "editor.wordWrap": "on",
+  "liveSassCompile.settings.autoprefix": [
+
+  ],
+  "liveSassCompile.settings.formats": [
+
+      {
+          "format": "expanded",
+          "extensionName": ".css",
+          "savePath": "/css",
+          "savePathReplacementPairs": null
+      },
+      {
+          "format": "compressed",
+          "extensionName": ".min.css",
+          "savePath":  "/css",
+          "savePathReplacementPairs": null
+      },
+
+  ]
+}

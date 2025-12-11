@@ -1,0 +1,58 @@
+@use "../global" as global;
+
+.c-btn {
+  display: inline-block;
+  width: 350px;
+  font-weight: 900;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: global.$primary-color;
+  box-shadow: 0px 4px 0px global.$secondary-color;
+  transition: 0.3s;
+  padding: 10px 13px 11px 15px;
+  font-size: 12px;
+  border-radius: 23px;
+  position: relative;
+  @include global.mq(sp) {
+    width: 93.333vw;
+    padding: 2.667vw 3.467vw 2.933vw 4vw;
+    font-size: 3.2vw;
+    border-radius: 6.133vw;
+    box-shadow: 0 1.067vw 0 global.$secondary-color;
+    border: 0.533vw solid #fff;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    background: url(../img/icon_right.svg) no-repeat center / contain;
+    @include global.mq(sp) {
+      width: 4.267vw;
+      height: 4.267vw;
+      right: 3.467vw;
+    }
+  }
+  .big {
+    font-size: 15px;
+    @include global.mq(sp) {
+      font-size: 4vw;
+    }
+  }
+  .yellow {
+    color: #fffd2b;
+  }
+  &:hover {
+    box-shadow: unset;
+    transform: translateY(4px);
+    background-color: global.$secondary-color;
+    @include global.mq(sp) {
+      transform: translateY(1.067vw);
+    }
+  }
+}
