@@ -1,0 +1,30 @@
+@use "../global" as global;
+
+.p-pc-right {
+  width: calc((100% - 375px) / 2);
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: global.$primary-color;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  @include global.mq(sp){
+    display: none;
+  }
+  &__nav{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    li{
+      margin: 18px 0;
+      transition: opacity 0.3s ease;
+    }
+    a:hover{
+      opacity: 0.8;
+    }
+  }
+}

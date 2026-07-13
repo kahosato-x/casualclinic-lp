@@ -1,0 +1,83 @@
+@use "../global" as global;
+
+.p-clinic {
+  padding: 40px 0 32px;
+  @include global.mq(sp) {
+    padding: 10.667vw 0 8.533vw;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    @include global.mq(sp) {
+      font-size: 8.533vw;
+    }
+  }
+  &__contents {
+    margin-top: 22px;
+    @include global.mq(sp) {
+      margin-top: 5.867vw;
+    }
+  }
+  &__map {
+    margin-top: 10px;
+    height: 136px;
+    width: 100%;
+    iframe {
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+    }
+    @include global.mq(sp) {
+      margin-top: 2.667vw;
+      height: 36.267vw;
+      iframe {
+        border-radius: 4.267vw;
+      }
+    }
+  }
+  &__info {
+    font-size: 16px;
+    margin-top: 24px;
+    line-height: 1.4;
+    font-weight: bold;
+    @include global.mq(sp) {
+      font-size: 4.267vw;
+      margin-top: 6.4vw;
+    }
+    dl {
+      margin-top: 15px;
+      @include global.mq(sp) {
+        margin-top: 4vw;
+      }
+    }
+    dt {
+      padding-left: 11px;
+      position: relative;
+      @include global.mq(sp) {
+        padding-left: 2.933vw;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: #f1ab32;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        @include global.mq(sp) {
+          width: 1.6vw;
+          height: 1.6vw;
+        }
+      }
+    }
+    dd {
+      margin-top: 4px;
+      @include global.mq(sp) {
+        margin-top: 1.067vw;
+      }
+    }
+  }
+}

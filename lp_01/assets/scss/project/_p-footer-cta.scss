@@ -1,0 +1,37 @@
+@use "../global" as global;
+
+.p-footer-cta {
+  max-width: 375px;
+  width: 100%;
+  opacity: 0;
+  transform: translate(-50%,150%);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  opacity: 1;
+  pointer-events: none; /* 非表示時のクリックイベントを無効化 */
+  z-index: 20;
+  @include global.mq(sp){
+    max-width: 100%;
+  }
+  &.visible {
+    opacity: 1;
+    transform: translate(-50%,0);
+    pointer-events: auto; /* 表示時のクリックイベントを有効化 */
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__btn {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include global.mq(sp){
+      bottom: 3.733vw;
+    }
+  }
+}

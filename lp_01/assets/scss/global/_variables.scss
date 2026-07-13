@@ -1,0 +1,42 @@
+// フォント
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+
+$font-family: "Zen Maru Gothic", sans-serif;
+
+// カラー
+$primary-color: #45BBB9;
+$secondary-color: #148484;
+$accent-color: #FFFE97;
+$text-color: #333333;
+$bg-green: #ECFFFD;
+
+// レイアウト
+$layout-width-inner: 405px;
+
+// ブレークポイント
+$breakpoints: (
+    //キー　　値
+    "sp": "screen and (max-width: 768px)",
+    //767px以下（スマホ）用の表示
+    "tab": "(min-width: 769px) and (max-width: #{$layout-width-inner - 1px})",
+    // 768px以上（タブレット）用の表示
+    "pc": "(min-width: #{$layout-width-inner})",
+    //（PC）用の表示
+) !default;
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // ヘッダー
+  header: 30,
+  // フローティング
+  floating: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);

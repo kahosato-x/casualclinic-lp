@@ -1,0 +1,73 @@
+@use "../global" as global;
+
+// ベース
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: global.$font-family;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: global.$text-color;
+  background-color: global.$bg-green;
+  letter-spacing: normal;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+}
+@media (min-width: 751px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+li,
+dd {
+  list-style-type: none;
+}
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.is-pc {
+  display: block;
+  @include global.mq(sp) {
+    display: none;
+  }
+}
+.is-sp {
+  display: none;
+  @include global.mq(sp) {
+    display: block;
+  }
+}
+.is-tab {
+  display: none;
+  @media screen and (max-width: 950px) {
+    display: block;
+  }
+}
+.bg_green{
+  background-color: global.$bg-green;
+}

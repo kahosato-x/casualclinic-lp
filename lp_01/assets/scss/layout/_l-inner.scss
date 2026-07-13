@@ -1,0 +1,12 @@
+@use "../global" as global;
+
+.l-inner {
+  max-width: global.$layout-width-inner;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include global.mq(sp){
+    padding: 0 4vw;
+    max-width: 100%;
+  }
+}
